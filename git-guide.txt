@@ -1,0 +1,80 @@
+
+
+1. **Check Out the `maire` Branch**  
+   Since you've already created a branch named `maire`, they need to switch to that branch:
+   ```bash
+   git checkout maire
+   ```
+   If they see a message that the branch doesn't exist locally, they can fetch the latest branches from GitHub:
+   ```bash
+   git fetch
+   git checkout maire
+   ```
+
+2. **Make Changes to the Project**  
+   Now they can work on the project, make changes to the files, and save them. They can check the current status of the changes with:
+   ```bash
+   git status
+   ```
+
+3. **Stage the Changes**  
+   Once they've made their changes, they need to stage the files they want to commit. For example:
+   ```bash
+   git add .
+   ```
+   or if they want to add specific files:
+   ```bash
+   git add path/to/file
+   ```
+
+4. **Commit the Changes**  
+   After staging the changes, they should commit them with a descriptive message:
+   ```bash
+   git commit -m "Describe what changes were made"
+   ```
+
+5. **Push the Changes to GitHub**  
+   Once they have committed their changes, they should push them to GitHub to the `maire` branch:
+   ```bash
+   git push origin maire
+   ```
+
+6. **Create a Pull Request (PR)**  
+   After pushing their changes to the `maire` branch, they should go to GitHub and create a Pull Request (PR). Here's how:
+   - Go to the GitHub repository in a browser.
+   - You should see a prompt to create a pull request with your branch `maire`.
+   - Click **Compare & pull request**.
+   - Add a title and description for the PR and then click **Create pull request**.
+
+7. **Review and Merge the Pull Request**  
+   After reviewing their work (and if everything looks good), you can merge the PR into the main branch.
+
+### Key Git Commands They Should Know
+- **Switch branches**:  
+  ```bash
+  git checkout branch-name
+  ```
+
+- **View current branches**:  
+  ```bash
+  git branch
+  ```
+
+- **Pull the latest changes**:  
+  ```bash
+  git pull origin branch-name
+  ```
+
+- **View commit history**:  
+  ```bash
+  git log
+  ```
+
+- **Check status of working directory**:  
+  ```bash
+  git status
+  ```
+
+---
+
+This guide will help them get started with using branches for your project. It focuses on the essential steps, like switching branches, making and committing changes, and collaborating with Pull Requests. You can always customize or add more details based on your specific workflow!

@@ -29,6 +29,8 @@ const emptyPuzzle = `2001
 console.log(parsePuzzle(emptyPuzzle));
 
 */
+
+//this is still not right.
 function findValidDirections(grid, row, col) {
     const height = grid.length;
     const width = grid[0].length;

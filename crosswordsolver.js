@@ -93,28 +93,28 @@ function crosswordSolver(puzzle, words) {
         const slot = slots[index];
         const possibleWords = wordsByLength[slot.length] || [];
 
-        console.log(`\nTrying to fill slot: ${slot.direction} at (${slot.row}, ${slot.col}), length: ${slot.length}`);
-        console.log(`Possible words: ${possibleWords.join(', ')}`);
+        // console.log(`\nTrying to fill slot: ${slot.direction} at (${slot.row}, ${slot.col}), length: ${slot.length}`);
+        // console.log(`Possible words: ${possibleWords.join(', ')}`);
 
         for (const word of possibleWords) {
             if (canPlaceWord(word, slot, index)) {
-                console.log(`Placing ${word}`);
+                // console.log(`Placing ${word}`);
                 placeWord(word, slot, index);
-                printGrid();
+                // printGrid();
                 if (solve(index + 1)) return true;
                 removeWord(word, slot, index);
-                console.log(`Removing ${word}`);
-                printGrid();
+                // console.log(`Removing ${word}`);
+                // printGrid();
             } else {
-                console.log(`Cannot place ${word}`);
+                // console.log(`Cannot place ${word}`);
             }
         }
 
         return false;
     }
 
-    console.log("\nInitial grid:");
-    printGrid();
+    // console.log("\nInitial grid:");
+    // printGrid();
 
     solve();
     if (solutionCount === 0) {
@@ -123,7 +123,7 @@ function crosswordSolver(puzzle, words) {
         return "Error: Multiple solutions exist, puzzle does not have a unique solution";
     }
 
-    return solution;
+    return firstSolution;
 }
 
 function countWords(puzzle) {
@@ -185,11 +185,12 @@ function identifyWordSlots(puzzle) {
     return slots;
 }
 
-module.exports = crosswordSolver;
+// module.exports = crosswordSolver;
 
 
 // Test the solver
-// const puzzle = '2001\n0..0\n1000\n0..0'
-// const words = ['aaab', 'aaac', 'aaad', 'aaae']
+const puzzle = '2001\n0..0\n1000\n0..0';
+    const words = ['casa', 'alan', 'ciao', 'anta'];
 
-// console.log(crosswordSolver(puzzle, words));
+
+console.log(crosswordSolver(puzzle, words));

@@ -1,4 +1,4 @@
-// const crosswordSolver = require('./crosswordsolver.js'); // Adjust the path as needed
+const crosswordSolver = require('./crosswordsolver.js'); // Adjust the path as needed
 
 describe('crossword Solver', () => {
   test('Solves a simple puzzle correctly', () => {
